@@ -1,4 +1,4 @@
-async function editFormHandler(event) {
+async function deleteFormHandler(event) {
   event.preventDefault();
   const blog_title = document.querySelector('#blog_title').value;
   const blog_content = document.querySelector('#blog_content').value;
@@ -19,7 +19,7 @@ async function editFormHandler(event) {
   // The Controller will handle this 'put' request.
 
   const response = await fetch(`/api/blog/${id}`, {
-    method: 'PUT',
+    method: 'DELETE',
     body: JSON.stringify({
       blog_title,
       blog_content,
@@ -41,4 +41,4 @@ async function editFormHandler(event) {
   }
 }
 
-document.querySelector('.edit-blog-form').addEventListener('submit', editFormHandler);
+document.querySelector('.delete-blog-form').addEventListener('submit', deleteFormHandler);
