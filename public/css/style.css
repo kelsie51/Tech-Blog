@@ -62,7 +62,7 @@
     background-color: #ebebeb;
   }
   
-  .add-dish-container {
+  .add-blog-container {
     display: flex;
     flex-wrap: wrap;
     width: 35%;
@@ -80,7 +80,7 @@
     background-color: var(--tertiary);
   }
   
-  .edit-dish-container {
+  .edit-blog-container {
     display: flex;
     flex-wrap: wrap;
     width: 35%;
@@ -99,7 +99,7 @@
   }
   
   /* CARDS */
-  .dish-card {
+  .blog-card {
     margin: 20px;
     flex: 0 1 300px;
     padding: 5px;
@@ -137,11 +137,11 @@
     border-width: medium;
   }
 
-  .has-nuts {
+  .timestamp {
     color: var(--error)
   }
 
-  .dish-card-header {
+  .blog-card-header {
     font-size: 1.5rem;
     color: var(--tertiary);
     margin: 0;

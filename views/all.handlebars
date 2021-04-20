@@ -1,11 +1,11 @@
 <div class="menu-container">
   <div class="card-header col-md-10">
     <h2>
-      &#127869 Current Menu
+      &#127869 Current Blog
     </h2>
   </div>
   {{#each blogs as |blog|}}
-    <div class="dish col-md-5">
+    <div class="blog col-md-5">
       <p>
         {{blog.id}}.
         {{blog.blog_title}}
@@ -13,46 +13,48 @@
     </div>
     <div class="col-md-7">
       <p>
-        Guest:
+        User:
         {{blog.user_name}}
       </p>
     </div>
   {{/each}}
 </div>
 <!-- This is the form for adding a new dish -->
-<div class="add-dish-container">
+<div class="add-blog-container">
   <h2>
-    RSVP with the blog you plan to bring!
+    RSVP with the blog you plan to write!
   </h2>
-  <form class="new-dish-form">
-    <label for="dish_name">
-      blog Name:
+  <form class="new-blog-form">
+    <label for="blog_title">
+      Blog Title:
     </label>
     <br />
-    <textarea id="dish_name" name="dish_name" rows="2" cols="30">
+    <textarea id="blog_title" name="blog_title" rows="2" cols="30">
       {{blog_title}}
     </textarea>
     <br />
-    <label for="description">
-      Description:
+    <label for="blog_content">
+      Blog_content:
     </label>
     <br />
-    <textarea id="description" name="description" rows="5" cols="30">
+    <textarea id="blog_content" name="blog_content" rows="5" cols="30">
       {{blog_content}}
     </textarea>
     <br />
-    <label for="guest_name">
-      Guest Name:
+    <label for="user_name">
+      User Name:
     </label>
     <br />
-    <textarea id="guest_name" name="guest_name" rows="2" cols="30">
+    <textarea id="user_name" name="user_name" rows="2" cols="30">
       {{user_name}}
     </textarea>
     <br />
     <br />
-    <input type="checkbox" id="has_nuts" name="has_nuts" value="true" />
-    <label for="has_nuts">
-      Check box if this blog contains nuts
+     <textarea id="timestamp" name="timestamp" rows="5" cols="30">
+      {{timestamp}}
+    </textarea>
+    <label for="timestamp">
+      Check box if this blong contains timestamp
     </label>
     <br />
     <button type="submit" value="Submit">

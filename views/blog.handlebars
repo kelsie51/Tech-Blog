@@ -1,19 +1,19 @@
-<div class="dish-card">
-  <div class="dish-card-header">
+<div class="blog-card">
+  <div class="blog-card-header">
     {{blog_title}}
   </div>
   <div class="card-body">
     <p>
-      Description:
+      Blog Content:
       {{blog_content}}
     </p>
     <p>
-      Guest:
-      {{guest_name}}
+      User:
+      {{user_name}}
     </p>
-    {{#if has_nuts}}
-      <p class="has-nuts">
-        Contains Nuts
+    {{#if timestamp}}
+      <p class="timestamp">
+        Contains Timestamp
       </p>
     {{/if}}
   </div>
@@ -24,39 +24,39 @@
 <!--What isn't it responsible for? -->
 <!--It is not responsible for data-related logic, requests, or business-logic. -->
 
-<div class="edit-dish-container">
+<div class="edit-blog-container">
   <h2>
     Update Dish
   </h2>
-  <form class="edit-dish-form">
-    <label for="dish_name">
-      Dish Name:
+  <form class="edit-blog-form">
+    <label for="blog_title">
+      Blog Title:
     </label>
     <br />
-    <textarea id="dish_name" name="dish_name" rows="2" cols="30">
+    <textarea id="blog_title" name="blog_title" rows="2" cols="30">
       {{blog_title}}
     </textarea>
     <br />
-    <label for="description">
-      Description:
+    <label for="blog_content">
+      blog_content:
     </label>
     <br />
-    <textarea id="description" name="description" rows="5" cols="30">
+    <textarea id="blog_content" name="blog_content" rows="5" cols="30">
       {{blog_content}}
     </textarea>
     <br />
-    <label for="guest_name">
-      Guest Name:
+    <label for="user_name">
+      User Name:
     </label>
     <br />
-    <textarea id="guest_name" name="guest_name" rows="2" cols="30">
+    <textarea id="user_name" name="user_name" rows="2" cols="30">
       {{user_name}}
     </textarea>
     <br />
     <br />
-    <input type="checkbox" id="has_nuts" name="has_nuts" value="true" />
-    <label for="has_nuts">
-      Check box if this blog contains nuts
+    <input type="checkbox" id="timestamp" name="timestamp" value="true" />
+    <label for="timestamp">
+      Check box if this blog contains timestamp
     </label>
     <br />
     <button type="submit" value="Submit">

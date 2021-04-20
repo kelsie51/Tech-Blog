@@ -1,16 +1,16 @@
 const router = require('express').Router();
-const Dish = require('../../models/Blog');
+const Blog = require('../../models/Blog');
 
-// route to create/add a dish
+// route to create/add a blog
 router.post('/', async (req, res) => {
   try { 
-    const dishData = await Dish.create({
-    dish_name: req.body.dish_name,
-    description: req.body.description,
-    guest_name: req.body.guest_name,
-    has_nuts: req.body.has_nuts,
+    const blogData = await Blog.create({
+      blog_title: req.body.blog_title,
+      blog_content: req.body.blog_content,
+      user_name: req.body.user_name,
+      timestamp: req.body.timestamp,
   });
-  res.status(200).json(dishData)
+  res.status(200).json(blogData)
 } catch (err) {
   res.status(400).json(err);
 }
@@ -22,12 +22,12 @@ router.put('/:id', async (req, res) => {
   // Where is this action method sending the data from the body of the fetch request? Why?
   // It is sending the data to the Model so that one dish can be updated with new data in the database.
   try {
-    const dish = await Dish.update(
+    const blog = await Blog.update(
     {
-      dish_name: req.body.dish_name,
-      description: req.body.description,
-      guest_name: req.body.guest_name,
-      has_nuts: req.body.has_nuts,
+      blog_title: req.body.blog_title,
+      blog_content: req.body.blog_content,
+      user_name: req.body. user_name,
+      timestamp: req.body.timestamp,
     },
     {
       where: {
@@ -36,7 +36,7 @@ router.put('/:id', async (req, res) => {
     });
     // If the database is updated successfully, what happens to the updated data below?
     // The updated data (dish) is then sent back to handler that dispatched the fetch request.
-    res.status(200).json(dish);
+    res.status(200).json(blog);
   } catch (err) {
       res.status(500).json(err);
     };

@@ -1,18 +1,18 @@
 async function newFormHandler(event) {
   event.preventDefault();
 
-  const dish_name = document.querySelector('#dish_name').value;
-  const description = document.querySelector('#description').value;
-  const guest_name = document.querySelector('#guest_name').value;
-  const has_nuts = document.querySelector('#has_nuts:checked') ? true : false;
+  const blog_title = document.querySelector('#blog_title').value;
+  const blog_content = document.querySelector('#blog_content').value;
+  const user_name = document.querySelector('#user_name').value;
+  const timestamp = document.querySelector('#timestamp').value;
 
-  const response = await fetch(`/api/dish`, {
+  const response = await fetch(`/api/blog`, {
     method: 'POST',
     body: JSON.stringify({
-      dish_name,
-      description,
-      guest_name,
-      has_nuts,
+      blog_title,
+      blog_content,
+      user_name,
+      timestamp,
     }),
     headers: {
       'Content-Type': 'application/json',
@@ -22,8 +22,8 @@ async function newFormHandler(event) {
   if (response.ok) {
     document.location.replace('/');
   } else {
-    alert('Failed to add dish');
+    alert('Failed to add blog');
   }
 }
 
-document.querySelector('.new-dish-form').addEventListener('submit', newFormHandler);
+document.querySelector('.new-blog-form').addEventListener('submit', newFormHandler);
