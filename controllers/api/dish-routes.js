@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const Dish = require('../../models/Dish');
+const Dish = require('../../models/Blog');
 
 // route to create/add a dish
 router.post('/', async (req, res) => {
