@@ -1,3 +1,4 @@
+
 <head>
   <meta charset="UTF-8">
   <title>Tech Blah Blah Blog</title>
@@ -12,6 +13,14 @@
         &#127881 Tech Blah Blah Blog! &#127881
       </h1>
     </header>
+    <nav>
+    <a href="/">Home</a>
+    {{#if loggedIn}}
+    <button id="logout" class="btn-no-style">Logout</button>
+    {{else}}
+    <a href="/login">Login</a>
+    {{/if}}
+  </nav>
       <main class="container container-fluid mt-5">
         {{{ body }}}
       </main>

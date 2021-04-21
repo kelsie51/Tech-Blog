@@ -7,7 +7,10 @@ router.get('/', async (req, res) => {
         res.json(err);
       });
         const blogs = blogData.map((blog) => blog.get({ plain: true }));
-        res.render('all', { blogs });
+        res.render('all', { 
+          blogs,
+           loggedIn: req.session.loggedIn, 
+        });
       });
   
   // route to get one dish
@@ -24,5 +27,15 @@ router.get('/', async (req, res) => {
           res.status(500).json(err);
       };     
   });
+
+  router.get('/login', (req, res) => {
+    if (req.session.loggedIn) {
+      res.redirect('/');
+      return;
+    }
+  
+    res.render('login');
+  });
+  
 
 module.exports = router;
