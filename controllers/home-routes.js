@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const Blog = require('../models/Blog');
+const User = require('../models/User');
 
 // route to get all dishes
 router.get('/', async (req, res) => {

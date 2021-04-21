@@ -6,9 +6,8 @@
   </div>
   {{#each blogs as |blog|}}
     <div class="blog col-md-5">
-      <p>
-        {{blog.id}}.
-        {{blog.blog_title}}
+      <p>            
+         <a href="/blog/{{blog.id}}">{{blog.blog_title}}</a>
       </p>
     </div>
     <div class="col-md-7">
@@ -45,7 +44,7 @@
       User Name:
     </label>
     <br />
-    <textarea id="user_name" name="user_name" rows="2" cols="30">
+    <textarea id="user_name" placeholder="{{username}}" name="user_name" rows="2" cols="30">
       {{user_name}}
     </textarea>
     <br />
