@@ -4,7 +4,8 @@ async function newFormHandler(event) {
   const blog_title = document.querySelector('#blog_title').value;
   const blog_content = document.querySelector('#blog_content').value;
   const user_name = document.querySelector('#user_name').value;
-  const timestamp = document.querySelector('#timestamp').value;
+  const timestamp = new Date();
+  
 
   const response = await fetch(`/api/blog`, {
     method: 'POST',
