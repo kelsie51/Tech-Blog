@@ -14,6 +14,9 @@
       <p>
         User:
         {{blog.user_name}}
+      </p> <p>
+        Created:
+        {{blog.timestamp}}
       </p>
     </div>
   {{/each}}
@@ -44,7 +47,7 @@
       User Name:
     </label>
     <br />
-    <textarea id="user_name" placeholder="{{username}}" name="user_name" rows="2" cols="30">
+    <textarea id="user_name" name="user_name" rows="2" cols="30">
       {{user_name}}
     </textarea>
     <br />
