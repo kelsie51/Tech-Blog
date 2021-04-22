@@ -13,4 +13,5 @@ const seedDatabase = async () => {
   process.exit(0);
 };
 
-seedDatabase();
+//seedDatabase();
+//No need to seed db in this app
