@@ -113,7 +113,7 @@ router.post('/login', async (req, res) => {
 
     req.session.save(() => {
       req.session.loggedIn = true;
-      //req.session.username = username;
+      req.session.username = req.body.email;
 
       res
         .status(200)

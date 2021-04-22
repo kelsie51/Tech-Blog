@@ -19,11 +19,16 @@ router.get('/', async (req, res) => {
     try{ 
         const blogData = await Blog.findByPk(req.params.id);
         if(!blogData) {
-            res.status(404).json({message: 'No post with this id!'});
-            return;
-        }
+          res.status(404).json({message: 'No post with this id!'});
+          return;
+      }
+      if(!req.session.loggedIn) {
+        res.status(404).json({message: 'No bloggin without the login!'});
+        return;
+    }
         const blog = blogData.get({ plain: true });
-        res.render('blog', blog);
+        res.render('blog', blog,
+          );
       } catch (err) {
           res.status(500).json(err);
       };     
