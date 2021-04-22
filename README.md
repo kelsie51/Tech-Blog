@@ -10,7 +10,7 @@ The Tech-blog log application allows users to log in, create blog notes, and sav
 * [Contributing](#contributing)
 * [Questions](#questions)
 
-![Screenshot](screen.png)
+![Screenshot](screen.PNG)
 
 ## Installation 
 The user should install Express, MYSQL, Sequelize, Express Handlebars node packages. 
