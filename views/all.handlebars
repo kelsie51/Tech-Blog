@@ -6,8 +6,12 @@
   </div>
   {{#each blogs as |blog|}}
     <div class="blog col-md-5">
-      <p>            
-         <a href="/blog/{{blog.id}}">{{blog.blog_title}}</a>
+      <p>  
+        <!--Only allow navigation to single blog post for editing and deleting if logged in-->
+         
+          <a href="/blog/{{blog.id}}">{{blog.blog_title}}</a>  
+         
+         
       </p>
     </div>
     <div class="col-md-7">
@@ -52,16 +56,15 @@
     </textarea>
     <br />
     <br />
-     <textarea id="timestamp" name="timestamp" rows="5" cols="30">
-      {{timestamp}}
-    </textarea>
-    <label for="timestamp">
-      Check box if this blong contains timestamp
-    </label>
+     
+     
     <br />
-    <button type="submit" value="Submit">
-      Submit
-    </button>
+    {{#if loggedIn}}
+   <button type="submit" value="Submit"> Submit  </button>   
+   {{else}}
+   If you wanna be bloggin', ya gotta be logged in 
+    {{/if}}
+    
   </form>
 </div>
 <script src="/js/add-dish.js"></script>
