@@ -4,7 +4,7 @@
 ## Description 
 The Tech-blog log application allows users to log in, create blog notes, and save notes. Timestamp included with blog entries. Deployed on Heroku,using the Express,MYSQL, Sequelize, Express Handlebars packages. 
  
-## Table of Contentss 
+## Table of Contents
 * [Installation](#installation)
 * [Usage](#usage)
 * [Contributing](#contributing)
