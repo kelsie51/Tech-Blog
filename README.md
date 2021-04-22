@@ -10,6 +10,8 @@ The Tech-blog log application allows users to log in, create blog notes, and sav
 * [Contributing](#contributing)
 * [Questions](#questions)
 
+ Link to deployed app on [Heroku](https://murmuring-springs-96477.herokuapp.com/)
+
 ![Screenshot](screen.PNG)
 
 ## Installation 
